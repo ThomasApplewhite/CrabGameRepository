@@ -5,37 +5,30 @@ using UnityEngine;
 public class HookController : MonoBehaviour {
 
     public GameObject Crab;
-    public Rigidbody physics;
-    public float GrappleSpeed;
+    public RigidBody physics;
     bool flying;
-    int range;
-    int tapeRange;
 	// Use this for initialization
-	void Start () {
-        range = 0;
+	void Start (int range) {
         //When created, the hook will rotate back and fire a certain distance. It's not effected by gravity, so it'll
         //go in a straigh line.
-        //physics = GetComponent<rigidbody>();
-        Crab = GameObject.FindWithTag("Crab");
-        transform.Rotate(new Vector3(-45, 0, 0));
-        physics.AddForce(new Vector3(0, 1000 + 1000 * range, 1000 + 1000 * range));
+        physics = GetComponent<RigidBody>;
+        transform.Rotate(new Vector3(0, -45, 0));
+        physics.AddForce(new Vector3(0, 0, 10 + 10 * range));
         flying = false;
-        tapeRange = range;
-    }
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector3.Distance(Crab.GetComponent<Transform>().position, transform.position) >  10 + tapeRange * 10)
+		if(Vector3.Distance(Crab.transform.position, transform.position) > range * 10)
         {
             //if the hook gets too far from the crab, it deletes itself.
-            Destroy(gameObject);
+            Destroy(this);
             //technically, flying is never set to 'false' again, but the script self-destructs when the crab gets there.
             //So it's fine, right?
         }
         if (flying)
         {
-            Crab.GetComponent<Rigidbody>().useGravity = false;
-            Crab.GetComponent<Transform>().Translate(new Vector3(0, GrappleSpeed, GrappleSpeed));
+            Crab.GetComponent<RigidBody>.AddForce(new Vector3(0, 5, 5));
         }
 	}
 
@@ -43,9 +36,8 @@ public class HookController : MonoBehaviour {
     {
         if (other.gameObject == Crab || other.gameObject.CompareTag("Shell"))
         {
-            Crab.GetComponent<Rigidbody>().useGravity = true;
             //if the hook hits the crab or the shell, the hook goes away
-            Destroy(gameObject);
+            Destroy(this);
             //flying = false;
         }
         else
