@@ -13,6 +13,9 @@ public class CrabMovement : MonoBehaviour {
 	//x-coord is side-to-side, y-cord is up-down, z-cord is forward-back. Sorta
 	// Update is called once per frame
 	void Update () {
+
+        //transform.eulerAngles = new Vector3(0.0f, Input.GetAxis("Mouse X") * 20.0f, 0.0f);
+
         if (Input.GetKey(KeyCode.W))
         {
             physics.AddForce(new Vector3(0, 0, MoveSpeed));

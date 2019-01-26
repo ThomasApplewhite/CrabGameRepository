@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Crab: {fileID: 0}
+  Tape: {fileID: 1546556638015706390, guid: afc6dbfc954ab6142a6a7fbf555143e4, type: 3}
   physics: {fileID: 3801389767948203960}
   GrappleSpeed: 0.1
 --- !u!54 &3801389767948203960
