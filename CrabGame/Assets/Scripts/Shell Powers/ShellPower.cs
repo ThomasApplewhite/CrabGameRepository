@@ -22,11 +22,6 @@ public class ShellPower : MonoBehaviour
 
     public void Ability()
     {
-        //Debug.Log("much CRUSTACEAN");
-        if(GameObject.FindWithTag("Hook") == null)
-        {
-            Instantiate(GrapplingHook, transform.parent.position + HookOffset, new Quaternion(0, 0, 0, 0));
-        }
-        
+        Instantiate(GrapplingHook, transform.parent.position + HookOffset, new Quaternion(0, 0, 0, 0));
     }
 }
