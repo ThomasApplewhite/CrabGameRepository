@@ -21,5 +21,6 @@ public class ShellPower : MonoBehaviour
     public void Ability()
     {
         Debug.Log("much CRUSTACEAN");
+        Instantiate(GrapplingHook);
     }
 }
