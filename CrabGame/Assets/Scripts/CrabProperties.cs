@@ -24,7 +24,7 @@ public class CrabProperties : MonoBehaviour {
             //^if it has the shell tag...
 
         {
-            Debug.Log("Shell touch!");
+            //Debug.Log("Shell touch!");
             ShellOn = true;
             Shell = other.gameObject;
             Shell.GetComponent<Rigidbody>().useGravity = false;
@@ -53,7 +53,7 @@ public class CrabProperties : MonoBehaviour {
             {
                 Shell.GetComponent<ShellPower>().Ability();
                 //ShellPower();
-                Debug.Log("You have the power!");
+                //Debug.Log("You have the power!");
             }else if (Input.GetKey(KeyCode.Mouse1))
             {
                 Shell.GetComponent<Rigidbody>().useGravity = true;
@@ -70,7 +70,7 @@ public class CrabProperties : MonoBehaviour {
         else if(Input.GetKeyDown(KeyCode.Space))
             {
             //depreciated
-            Debug.Log("Snip");
+            //Debug.Log("Snip");
         }
 
     }

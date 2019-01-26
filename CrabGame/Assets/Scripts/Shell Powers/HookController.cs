@@ -6,6 +6,7 @@ public class HookController : MonoBehaviour {
 
     public GameObject Crab;
     public Rigidbody physics;
+    public float GrappleSpeed;
     bool flying;
     int range;
     int tapeRange;
@@ -16,24 +17,24 @@ public class HookController : MonoBehaviour {
         //go in a straigh line.
         //physics = GetComponent<rigidbody>();
         Crab = GameObject.FindWithTag("Crab");
-        transform.Rotate(new Vector3(0, -45, 0));
-        physics.AddForce(new Vector3(0, 0, 100 + 100 * range));
+        transform.Rotate(new Vector3(-45, 0, 0));
+        physics.AddForce(new Vector3(0, 1000 + 1000 * range, 1000 + 1000 * range));
         flying = false;
         tapeRange = range;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector3.Distance(Crab.GetComponent<Transform>().position, transform.position) > tapeRange * 10)
+		if(Vector3.Distance(Crab.GetComponent<Transform>().position, transform.position) >  10 + tapeRange * 10)
         {
             //if the hook gets too far from the crab, it deletes itself.
-            Destroy(this);
+            Destroy(gameObject);
             //technically, flying is never set to 'false' again, but the script self-destructs when the crab gets there.
             //So it's fine, right?
         }
         if (flying)
         {
-            Crab.GetComponent<Rigidbody>().AddForce(new Vector3(0, 5, 5));
+            Crab.GetComponent<Rigidbody>().AddForce(new Vector3(0, GrappleSpeed, GrappleSpeed));
         }
 	}
 
@@ -42,7 +43,7 @@ public class HookController : MonoBehaviour {
         if (other.gameObject == Crab || other.gameObject.CompareTag("Shell"))
         {
             //if the hook hits the crab or the shell, the hook goes away
-            Destroy(this);
+            Destroy(gameObject);
             //flying = false;
         }
         else

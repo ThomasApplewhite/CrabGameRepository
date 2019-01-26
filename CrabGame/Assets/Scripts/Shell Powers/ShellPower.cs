@@ -11,7 +11,7 @@ public class ShellPower : MonoBehaviour
     void Start()
     {
         HookOffset = new Vector3(0, 1, 1);
-        Debug.Log("boss SHELL");
+        //Debug.Log("boss SHELL");
     }
 
     // Update is called once per frame
@@ -22,7 +22,11 @@ public class ShellPower : MonoBehaviour
 
     public void Ability()
     {
-        Debug.Log("much CRUSTACEAN");
-        Instantiate(GrapplingHook, transform.parent.position + HookOffset, new Quaternion(0, 0 , 0, 0));
+        //Debug.Log("much CRUSTACEAN");
+        if(GameObject.FindWithTag("Hook") == null)
+        {
+            Instantiate(GrapplingHook, transform.parent.position + HookOffset, new Quaternion(0, 0, 0, 0));
+        }
+        
     }
 }

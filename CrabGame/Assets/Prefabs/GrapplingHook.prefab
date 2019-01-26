@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Crab: {fileID: 0}
   physics: {fileID: 3801389767948203960}
+  GrappleSpeed: 100
 --- !u!54 &3801389767948203960
 Rigidbody:
   m_ObjectHideFlags: 0
