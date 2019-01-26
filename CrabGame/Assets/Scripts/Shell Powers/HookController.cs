@@ -5,6 +5,7 @@ using UnityEngine;
 public class HookController : MonoBehaviour {
 
     public GameObject Crab;
+    public GameObject Tape;
     public Rigidbody physics;
     public float GrappleSpeed;
     bool flying;
@@ -34,8 +35,10 @@ public class HookController : MonoBehaviour {
         }
         if (flying)
         {
-            Crab.GetComponent<Rigidbody>().useGravity = false;
             Crab.GetComponent<Transform>().Translate(new Vector3(0, GrappleSpeed, GrappleSpeed));
+            Tape.GetComponent<Transform>().position = transform.position + Crab.GetComponent<Transform>().position;
+            //big mess rn Tape.GetComponent<Transform>().scale = (new Vector3(1, 0.1f, transform.position 
+                //- Crab.GetComponent<Transform>().position));
         }
 	}
 
@@ -52,6 +55,7 @@ public class HookController : MonoBehaviour {
         {
             //if it hits anything else, the crab will fly to the hook. Somehow.
             flying = true;
+            Instantiate(Tape, transform.position + Crab.GetComponent<Transform>().position, new Quaternion(0, 0, 0, 0));
 
         }
     }
