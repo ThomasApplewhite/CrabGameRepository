@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CrabProperties : MonoBehaviour {
 
+    public Component ShellPower;
     bool ShellOn;
     GameObject Shell;
     //^The shell
@@ -28,6 +29,7 @@ public class CrabProperties : MonoBehaviour {
             Shell = other.gameObject;
             Shell.GetComponent<Rigidbody>().useGravity = false;
             Shell.GetComponent<Rigidbody>().freezeRotation = true;
+            //ShellPower = 
             Shell.transform.position = this.transform.position + ShellOffset;
             Shell.transform.parent = this.transform;
 
@@ -47,9 +49,10 @@ public class CrabProperties : MonoBehaviour {
     {
         if (ShellOn)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Shell.ShellPower();
+                Shell.GetComponent<ShellPower>().Ability();
+                //ShellPower();
                 Debug.Log("You have the power!");
             }else if (Input.GetKey(KeyCode.Mouse1))
             {
@@ -64,7 +67,7 @@ public class CrabProperties : MonoBehaviour {
                 //only applied for one frame.
             }
         }
-        else if(Input.GetKey(KeyCode.Space))
+        else if(Input.GetKeyDown(KeyCode.Space))
             {
             Debug.Log("Snip");
         }

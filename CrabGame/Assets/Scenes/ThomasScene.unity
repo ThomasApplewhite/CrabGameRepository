@@ -298,11 +298,11 @@ GameObject:
   - component: {fileID: 509043067}
   - component: {fileID: 509043066}
   - component: {fileID: 509043065}
-  - component: {fileID: 509043068}
-  - component: {fileID: 509043069}
   - component: {fileID: 509043064}
   - component: {fileID: 509043070}
   - component: {fileID: 509043063}
+  - component: {fileID: 509043069}
+  - component: {fileID: 509043068}
   m_Layer: 0
   m_Name: CrabSphere
   m_TagString: Untagged
@@ -416,6 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d741ebe9f0e75f43866a3fd542d3d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShellPower: {fileID: 0}
 --- !u!65 &509043070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 814645747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d1df78e209363439e90221a4f69667, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1046475039
