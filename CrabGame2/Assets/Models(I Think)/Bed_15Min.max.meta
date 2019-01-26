@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-guid: fb68b49fae237c1438ed1e90b462b5bb
+guid: fe3409d9cae55b74fa17082c38662497
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box001
+    100004: Box007
     400000: //RootNode
+    400002: Box001
+    400004: Box007
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: Box001
+    2300002: Box007
+    3300000: Box001
+    3300002: Box007
     4300000: Box001
+    4300002: Box007
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -44,7 +51,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -69,9 +75,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

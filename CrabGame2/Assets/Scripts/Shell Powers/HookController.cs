@@ -5,26 +5,21 @@ using UnityEngine;
 public class HookController : MonoBehaviour {
 
     public GameObject Crab;
-    public Rigidbody physics;
+    public RigidBody physics;
     bool flying;
-    int range;
-    int tapeRange;
 	// Use this for initialization
-	void Start () {
-        range = 0;
+	void Start (int range) {
         //When created, the hook will rotate back and fire a certain distance. It's not effected by gravity, so it'll
         //go in a straigh line.
-        //physics = GetComponent<rigidbody>();
-        Crab = GameObject.FindWithTag("Crab");
+        physics = GetComponent<RigidBody>;
         transform.Rotate(new Vector3(0, -45, 0));
-        physics.AddForce(new Vector3(0, 0, 100 + 100 * range));
+        physics.AddForce(new Vector3(0, 0, 10 + 10 * range));
         flying = false;
-        tapeRange = range;
-    }
+	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Vector3.Distance(Crab.GetComponent<Transform>().position, transform.position) > tapeRange * 10)
+		if(Vector3.Distance(Crab.transform.position, transform.position) > range * 10)
         {
             //if the hook gets too far from the crab, it deletes itself.
             Destroy(this);
@@ -33,7 +28,7 @@ public class HookController : MonoBehaviour {
         }
         if (flying)
         {
-            Crab.GetComponent<Rigidbody>().AddForce(new Vector3(0, 5, 5));
+            Crab.GetComponent<RigidBody>.AddForce(new Vector3(0, 5, 5));
         }
 	}
 

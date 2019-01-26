@@ -69,7 +69,6 @@ public class CrabProperties : MonoBehaviour {
         }
         else if(Input.GetKeyDown(KeyCode.Space))
             {
-            //depreciated
             Debug.Log("Snip");
         }
 

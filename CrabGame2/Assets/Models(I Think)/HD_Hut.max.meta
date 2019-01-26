@@ -1,14 +1,46 @@
 fileFormatVersion: 2
-guid: fb68b49fae237c1438ed1e90b462b5bb
+guid: 5359313dfc4bffa43b76832271cd7d8b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: HD_Hut_Chimney
+    100004: HD_Hut_Door
+    100006: HD_Hut_Main
+    100008: HD_Hut_Porch
+    100010: HD_Hut_Roof
+    100012: HD_Hut_Window
+    100014: HD_Window_Glass
     400000: //RootNode
+    400002: HD_Hut_Chimney
+    400004: HD_Hut_Door
+    400006: HD_Hut_Main
+    400008: HD_Hut_Porch
+    400010: HD_Hut_Roof
+    400012: HD_Hut_Window
+    400014: HD_Window_Glass
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Box001
+    2300000: HD_Hut_Chimney
+    2300002: HD_Hut_Door
+    2300004: HD_Hut_Main
+    2300006: HD_Hut_Porch
+    2300008: HD_Hut_Roof
+    2300010: HD_Hut_Window
+    2300012: HD_Window_Glass
+    3300000: HD_Hut_Chimney
+    3300002: HD_Hut_Door
+    3300004: HD_Hut_Main
+    3300006: HD_Hut_Porch
+    3300008: HD_Hut_Roof
+    3300010: HD_Hut_Window
+    3300012: HD_Window_Glass
+    4300000: HD_Hut_Door
+    4300002: HD_Hut_Main
+    4300004: HD_Hut_Porch
+    4300006: HD_Hut_Window
+    4300008: HD_Window_Glass
+    4300010: HD_Hut_Roof
+    4300012: HD_Hut_Chimney
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -44,7 +76,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -69,9 +100,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
