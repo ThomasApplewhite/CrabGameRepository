@@ -10,6 +10,7 @@ public class CrabProperties : MonoBehaviour {
     //^The shell
     Vector3 ShellOffset;
     //^how far the shell is from the rab (or it's position relative to crab)
+    public HookController currentHook = null;
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +50,7 @@ public class CrabProperties : MonoBehaviour {
     {
         if (ShellOn)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && currentHook==null)
             {
                 Shell.GetComponent<ShellPower>().Ability();
                 //ShellPower();

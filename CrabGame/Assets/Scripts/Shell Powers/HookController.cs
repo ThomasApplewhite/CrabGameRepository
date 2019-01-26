@@ -17,12 +17,13 @@ public class HookController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        range = 0;
+        range = 5;
         //When created, the hook will rotate back and fire a certain distance. It's not effected by gravity, so it'll
         //go in a straigh line.
         //physics = GetComponent<rigidbody>();
         Crab = GameObject.FindWithTag("Crab");
-//        transform.Rotate(new Vector3(-45, 0, 0));
+        Crab.GetComponent<CrabProperties>().currentHook = this;
+        //        transform.Rotate(new Vector3(-45, 0, 0));
         flying = false;
         tapeRange = range;
         initialPosition = transform.position;
@@ -30,9 +31,10 @@ public class HookController : MonoBehaviour {
     }
 	
 	void FixedUpdate () {
-		if(Vector3.Distance(initialPosition, transform.position) >  10 + tapeRange * 10)
+		if(Vector3.Distance(initialPosition, transform.position) >  tapeRange)
         {
             //if the hook gets too far from the crab, it deletes itself.
+            Crab.GetComponent<CrabProperties>().currentHook = null;
             Destroy(gameObject);
             //technically, flying is never set to 'false' again, but the script self-destructs when the crab gets there.
             //So it's fine, right?
@@ -40,8 +42,14 @@ public class HookController : MonoBehaviour {
 
         if (flying)
         {
-            Crab.GetComponent<Transform>().Translate(new Vector3(0, GrappleSpeed, GrappleSpeed));
-           /* Tape.GetComponent<Transform>().Translate(transform.position + Crab.GetComponent<Transform>().position);
+            Crab.GetComponent<Rigidbody>().useGravity = false;
+            Crab.GetComponent<Transform>().Translate(0.1f * (transform.position - Crab.transform.position).normalized);
+            Crab.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            Tape.GetComponent<Transform>().position = transform.position + Crab.GetComponent<Transform>().position;
+            //big mess rn Tape.GetComponent<Transform>().scale = (new Vector3(1, 0.1f, transform.position 
+                //- Crab.GetComponent<Transform>().position));
+
+        /* Tape.GetComponent<Transform>().Translate(transform.position + Crab.GetComponent<Transform>().position);
             Tape.GetComponent<Transform>().localScale += (new Vector3(1, 0.1f, transform.position.z 
                 - Crab.GetComponent<Transform>().position.z));
                 Some stuff for tape, forget it for now */
