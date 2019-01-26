@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrabMovement : MonoBehaviour {
 
-    public float MoveSpeed;
+    public float MoveSpeed = 5.0f;
     public Rigidbody physics;
 	// Use this for initialization
 	void Start () {
