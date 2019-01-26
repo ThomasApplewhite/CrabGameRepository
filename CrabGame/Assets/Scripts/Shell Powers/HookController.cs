@@ -34,7 +34,8 @@ public class HookController : MonoBehaviour {
         }
         if (flying)
         {
-            Crab.GetComponent<Rigidbody>().AddForce(new Vector3(0, GrappleSpeed, GrappleSpeed));
+            Crab.GetComponent<Rigidbody>().useGravity = false;
+            Crab.GetComponent<Transform>().Translate(new Vector3(0, GrappleSpeed, GrappleSpeed));
         }
 	}
 
@@ -42,6 +43,7 @@ public class HookController : MonoBehaviour {
     {
         if (other.gameObject == Crab || other.gameObject.CompareTag("Shell"))
         {
+            Crab.GetComponent<Rigidbody>().useGravity = true;
             //if the hook hits the crab or the shell, the hook goes away
             Destroy(gameObject);
             //flying = false;
