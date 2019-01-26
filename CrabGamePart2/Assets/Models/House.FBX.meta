@@ -1,19 +1,46 @@
 fileFormatVersion: 2
-guid: 3bf428ec9776c6147927a0682c827556
+guid: 91839f8dd0ac2ac41afef8d9e7f6f9c5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cylinder001
-    100002: //RootNode
-    100004: Line001
-    400000: Cylinder001
-    400002: //RootNode
-    400004: Line001
+    100000: HD_Hut_Chimney
+    100002: HD_Hut_Door
+    100004: HD_Hut_Main
+    100006: HD_Hut_Porch
+    100008: HD_Hut_Roof
+    100010: HD_Hut_Window
+    100012: HD_Window_Glass
+    100014: //RootNode
+    400000: HD_Hut_Chimney
+    400002: HD_Hut_Door
+    400004: HD_Hut_Main
+    400006: HD_Hut_Porch
+    400008: HD_Hut_Roof
+    400010: HD_Hut_Window
+    400012: HD_Window_Glass
+    400014: //RootNode
     2100000: No Name
-    2300000: Cylinder001
-    3300000: Cylinder001
-    4300000: Cylinder001
-    2186277476908879412: ImportLogs
+    2300000: HD_Hut_Chimney
+    2300002: HD_Hut_Door
+    2300004: HD_Hut_Main
+    2300006: HD_Hut_Porch
+    2300008: HD_Hut_Roof
+    2300010: HD_Hut_Window
+    2300012: HD_Window_Glass
+    3300000: HD_Hut_Chimney
+    3300002: HD_Hut_Door
+    3300004: HD_Hut_Main
+    3300006: HD_Hut_Porch
+    3300008: HD_Hut_Roof
+    3300010: HD_Hut_Window
+    3300012: HD_Window_Glass
+    4300000: HD_Hut_Door
+    4300002: HD_Hut_Main
+    4300004: HD_Hut_Porch
+    4300006: HD_Hut_Window
+    4300008: HD_Window_Glass
+    4300010: HD_Hut_Roof
+    4300012: HD_Hut_Chimney
   externalObjects: {}
   materials:
     importMaterials: 1
