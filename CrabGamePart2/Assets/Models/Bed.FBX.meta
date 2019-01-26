@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe3409d9cae55b74fa17082c38662497
+guid: ff3b92146d2b4fd4bbeb6c755bed9125
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -16,7 +16,6 @@ ModelImporter:
     3300002: Box007
     4300000: Box001
     4300002: Box007
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

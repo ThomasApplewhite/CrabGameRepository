@@ -1,37 +1,14 @@
 fileFormatVersion: 2
-guid: 13d4f1ceeb18b6e4591352bd159fdc41
+guid: 8d33164583dab0147bbbe5c43f2dc6db
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Couch_Back1
-    100004: Couch_Back2
-    100006: Couch_Base
-    100008: Couch_Cushion1
-    100010: Couch_Cushion2
     400000: //RootNode
-    400002: Couch_Back1
-    400004: Couch_Back2
-    400006: Couch_Base
-    400008: Couch_Cushion1
-    400010: Couch_Cushion2
     2100000: No Name
-    2300000: Couch_Back1
-    2300002: Couch_Back2
-    2300004: Couch_Base
-    2300006: Couch_Cushion1
-    2300008: Couch_Cushion2
-    3300000: Couch_Back1
-    3300002: Couch_Back2
-    3300004: Couch_Base
-    3300006: Couch_Cushion1
-    3300008: Couch_Cushion2
-    4300000: Couch_Base
-    4300002: Couch_Cushion1
-    4300004: Couch_Cushion2
-    4300006: Couch_Back1
-    4300008: Couch_Back2
-    2186277476908879412: ImportLogs
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box001
   externalObjects: {}
   materials:
     importMaterials: 1
