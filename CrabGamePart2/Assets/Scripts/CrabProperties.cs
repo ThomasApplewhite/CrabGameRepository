@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrabProperties : MonoBehaviour {
+public class CrabProperties : MonoBehaviour
+{
 
     public Component ShellPower;
     bool ShellOn;
@@ -10,21 +11,23 @@ public class CrabProperties : MonoBehaviour {
     //^The shell
     Vector3 ShellOffset;
     //^how far the shell is from the rab (or it's position relative to crab)
+    public HookController currentHook = null;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         ShellOn = false;
         ShellOffset = new Vector3(0, .5f, 0);
-	}
+    }
 
     void OnCollisionEnter(Collision other)
-        //^whenever this collides with a rigidbody...
+    //^whenever this collides with a rigidbody...
     {
         if (other.gameObject.CompareTag("Shell"))
-            //^if it has the shell tag...
+        //^if it has the shell tag...
 
         {
-            Debug.Log("Shell touch!");
+            //Debug.Log("Shell touch!");
             ShellOn = true;
             Shell = other.gameObject;
             Shell.GetComponent<Rigidbody>().useGravity = false;
@@ -49,12 +52,13 @@ public class CrabProperties : MonoBehaviour {
     {
         if (ShellOn)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && currentHook == null)
             {
                 Shell.GetComponent<ShellPower>().Ability();
                 //ShellPower();
-                Debug.Log("You have the power!");
-            }else if (Input.GetKey(KeyCode.Mouse1))
+                //Debug.Log("You have the power!");
+            }
+            else if (Input.GetKey(KeyCode.Mouse1))
             {
                 Shell.GetComponent<Rigidbody>().useGravity = true;
                 Shell.GetComponent<Rigidbody>().freezeRotation = false;
@@ -67,9 +71,10 @@ public class CrabProperties : MonoBehaviour {
                 //only applied for one frame.
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Space))
-            {
-            Debug.Log("Snip");
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //depreciated
+            //Debug.Log("Snip");
         }
 
     }
