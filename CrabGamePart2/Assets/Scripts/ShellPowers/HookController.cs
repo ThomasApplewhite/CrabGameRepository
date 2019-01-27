@@ -46,7 +46,7 @@ public class HookController : MonoBehaviour
         if (flying)
         {
             Crab.GetComponent<Rigidbody>().useGravity = false;
-            Crab.GetComponent<Transform>().Translate(0.1f * (transform.position - Crab.transform.position).normalized);
+            Crab.GetComponent<Transform>().Translate(0.1f * (transform.position - Crab.transform.position).normalized, Space.World);
             Crab.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             Tape.GetComponent<Transform>().position = transform.position + Crab.GetComponent<Transform>().position;
             //big mess rn Tape.GetComponent<Transform>().scale = (new Vector3(1, 0.1f, transform.position 
