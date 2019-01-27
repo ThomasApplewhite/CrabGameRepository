@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shell
   - HomeShell
+  - Tape
   layers:
   - Default
   - TransparentFX
