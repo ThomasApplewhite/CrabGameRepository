@@ -48,7 +48,7 @@ public class HookController : MonoBehaviour
             Crab.GetComponent<Rigidbody>().useGravity = false;
             Crab.GetComponent<Transform>().Translate(0.1f * (transform.position - Crab.transform.position).normalized, Space.World);
             Crab.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            Tape.GetComponent<Transform>().position = transform.position + Crab.GetComponent<Transform>().position;
+            //Tape.GetComponent<Transform>().position = transform.position + Crab.GetComponent<Transform>().position;
             //big mess rn Tape.GetComponent<Transform>().scale = (new Vector3(1, 0.1f, transform.position 
             //- Crab.GetComponent<Transform>().position));
 
@@ -65,22 +65,18 @@ public class HookController : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject == Crab || other.gameObject.CompareTag("Shell"))
-        {
-            if (flying)
-            {
-                Crab.GetComponent<Rigidbody>().useGravity = true;
-                //if the hook hits the crab or the shell, the hook goes away
-                Destroy(gameObject);
-                //flying = false;
-            }
-        }
-        else
+        if (other.gameObject != Crab && !other.gameObject.CompareTag("Shell") && !other.gameObject.CompareTag("Tape"))
         {
             //if it hits anything else, the crab will fly to the hook. Somehow.
             flying = true;
-            Instantiate(Tape, transform.position + Crab.GetComponent<Transform>().position, new Quaternion(0, 0, 0, 0));
-
+            //Instantiate(Tape, transform.position + Crab.GetComponent<Transform>().position, new Quaternion(0, 0, 0, 0));
+        }
+        else if(other.gameObject == Crab && flying)
+        {
+            Crab.GetComponent<Rigidbody>().useGravity = true;
+            //if the hook hits the crab, the hook goes away
+            Destroy(gameObject);
+            //flying = false;
         }
     }
 }

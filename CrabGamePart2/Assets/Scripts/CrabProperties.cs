@@ -1,49 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CrabProperties : MonoBehaviour
 {
 
+    int score;
+    //^how many tapes he got
+    public Text scoreDisplay;
+
     public Component ShellPower;
     bool ShellOn;
-    GameObject Shell;
+    public GameObject Shell;
     //^The shell
-    Vector3 ShellOffset;
-    //^how far the shell is from the rab (or it's position relative to crab)
     public HookController currentHook = null;
 
     // Use this for initialization
     void Start()
     {
         ShellOn = false;
-        ShellOffset = new Vector3(0, .5f, 0);
     }
 
     void OnCollisionEnter(Collision other)
     //^whenever this collides with a rigidbody...
     {
-        if (other.gameObject.CompareTag("Shell"))
-        //^if it has the shell tag...
-
+        if (other.gameObject.CompareTag("Tape") && other.gameObject != Shell)
         {
-            //Debug.Log("Shell touch!");
-            ShellOn = true;
-            Shell = other.gameObject;
-            Shell.GetComponent<Rigidbody>().useGravity = false;
-            Shell.GetComponent<Rigidbody>().freezeRotation = true;
-            //ShellPower = 
-            Shell.transform.position = this.transform.position + ShellOffset;
-            Shell.transform.parent = this.transform;
-
-            /* Does all of these things in this order:
-            print "Shell touch!" to the console
-            set shell on to 'true'
-            define that object as 'Shell'
-            disables Shell's gravity (so it doesn't get moved about)
-            disables Shell's rotation (so it doesn't spin in midair)
-            moves Shell to near this object.
-            make Shell a child of the object this is attached to.*/
+            score++;
+            scoreDisplay.text = "" + score;
+            if (score > 1)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                ShellOn = true;
+                Shell = other.gameObject;
+                Shell.GetComponent<Collider>().enabled = false;
+                Shell.transform.position = this.transform.position + new Vector3(0, 0f, 0);
+                Shell.transform.parent = this.transform;
+                Shell.transform.localPosition = new Vector3(0, 0f, 2f);
+                Shell.transform.localEulerAngles = new Vector3(10f, 160f, 20f);
+            }
         }
     }
 
@@ -52,7 +51,16 @@ public class CrabProperties : MonoBehaviour
     {
         if (ShellOn)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && currentHook == null)
+            // Check if the player is on the ground by looking for geometry below the player.
+            int non_player_layer_mask = ~(1 << 9);
+            SphereCollider c = GetComponent<SphereCollider>();
+            bool on_ground = Physics.CheckSphere(
+                c.bounds.center + new Vector3(0, -c.radius/100, 0),
+                c.radius,
+                non_player_layer_mask
+            );
+
+            if (Input.GetKeyDown(KeyCode.Space) && currentHook == null && on_ground)
             {
                 Shell.GetComponent<ShellPower>().Ability();
                 //ShellPower();
@@ -60,15 +68,17 @@ public class CrabProperties : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.Mouse1))
             {
-                Shell.GetComponent<Rigidbody>().useGravity = true;
-                Shell.GetComponent<Rigidbody>().freezeRotation = false;
+/*
+                --score;
+                Shell.GetComponent<Collider>().enabled = true;
                 Shell.transform.parent = null;
-                Shell.GetComponent<Rigidbody>().AddForce(new Vector3(0, 75, 0));
+                Shell.GetComponent<Rigidbody>().AddForce(new Vector3(0, 75, 0));   (???) // This line of code doesn't work because Shell doesn't have a Rigidbody anymore!
                 Shell = null;
                 ShellOn = false;
                 //Resets all shell-related variables and returns the shell to being its own object. Also pops it up
                 //and bak a bit. You can juggle your shell, I suppose. The numbers seem big, but the force is
                 //only applied for one frame.
+*/
             }
         }
         else if (Input.GetKeyDown(KeyCode.Space))
@@ -82,10 +92,12 @@ public class CrabProperties : MonoBehaviour
     // LateUpdate is called once after every frame
     void LateUpdate()
     {
+/*
         if (ShellOn)
         {
             Shell.transform.position = this.transform.position + ShellOffset;
             Shell.transform.rotation = this.transform.rotation;
         }
+*/
     }
 }

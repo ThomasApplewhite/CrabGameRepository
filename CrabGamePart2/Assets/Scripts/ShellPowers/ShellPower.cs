@@ -10,7 +10,7 @@ public class ShellPower : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        HookOffset = new Vector3(0, 1, 0);
+        HookOffset = new Vector3(0, .5f, 0);
         //Debug.Log("boss SHELL");
     }
 
