@@ -63,7 +63,7 @@ public class CrabProperties : MonoBehaviour
                 Shell.GetComponent<Rigidbody>().useGravity = true;
                 Shell.GetComponent<Rigidbody>().freezeRotation = false;
                 Shell.transform.parent = null;
-                Shell.GetComponent<Rigidbody>().AddForce(new Vector3(0, 75, -75));
+                Shell.GetComponent<Rigidbody>().AddForce(new Vector3(0, 75, 0));
                 Shell = null;
                 ShellOn = false;
                 //Resets all shell-related variables and returns the shell to being its own object. Also pops it up
@@ -85,6 +85,7 @@ public class CrabProperties : MonoBehaviour
         if (ShellOn)
         {
             Shell.transform.position = this.transform.position + ShellOffset;
+            Shell.transform.rotation = this.transform.rotation;
         }
     }
 }
