@@ -7,6 +7,8 @@ TagManager:
   - Shell
   - HomeShell
   - Tape
+  - Crab
+  - Hook
   layers:
   - Default
   - TransparentFX

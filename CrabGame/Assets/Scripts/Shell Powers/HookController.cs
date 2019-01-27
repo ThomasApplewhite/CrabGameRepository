@@ -76,7 +76,7 @@ public class HookController : MonoBehaviour {
         {
             //if it hits anything else, the crab will fly to the hook. Somehow.
             flying = true;
-            //Instantiate(Tape, transform.position + Crab.GetComponent<Transform>().position, new Quaternion(0, 0, 0, 0));
+            Instantiate(Tape, transform.position + Crab.GetComponent<Transform>().position, new Quaternion(0, 0, 0, 0));
 
         }
     }
