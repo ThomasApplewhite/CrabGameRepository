@@ -29,7 +29,7 @@ public class HookController : MonoBehaviour
         flying = false;
         tapeRange = range;
         initialPosition = transform.position;
-        direction = new Vector3(0, 1, 1).normalized;
+        direction = Camera.main.GetComponent<CameraFollower>().cameraDirection;
     }
 
     void FixedUpdate()
