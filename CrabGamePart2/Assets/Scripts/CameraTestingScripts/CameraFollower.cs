@@ -21,14 +21,13 @@ public class CameraFollower : MonoBehaviour {
         //float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
 
-        target.transform.Rotate(-vertical, 0, 0);
+        if(target.transform.eulerAngles.x - vertical > 285  || target.transform.eulerAngles.x - vertical < 70)
+            target.transform.Rotate(-vertical, 0, 0);
 
-        float desiredAngle_X = target.transform.eulerAngles.x;
-        float desiredAngle_Y = target.transform.eulerAngles.y;
-        Quaternion rotation = Quaternion.Euler(desiredAngle_X, desiredAngle_Y, 0);
-        transform.position = target.transform.position - (rotation * offset);
-        cameraDirection = (rotation * offset).normalized;
-
+        transform.position = target.transform.position - (target.transform.rotation * offset);
         transform.LookAt(target.transform);
+
+        // Let other modules know the current camera direction.
+        cameraDirection = (target.transform.rotation * offset).normalized;
     }
 }
