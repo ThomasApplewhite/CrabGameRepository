@@ -19,11 +19,11 @@ public class HookController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        range = 5;
         //When created, the hook will rotate back and fire a certain distance. It's not effected by gravity, so it'll
         //go in a straigh line.
         //physics = GetComponent<rigidbody>();
         Crab = GameObject.FindWithTag("Crab");
+        range = Crab.GetComponent<CrabProperties>().score;
         Crab.GetComponent<CrabProperties>().currentHook = this;
         //        transform.Rotate(new Vector3(-45, 0, 0));
         flying = false;
@@ -34,15 +34,6 @@ public class HookController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Vector3.Distance(initialPosition, transform.position) > tapeRange)
-        {
-            //if the hook gets too far from the crab, it deletes itself.
-            Crab.GetComponent<CrabProperties>().currentHook = null;
-            Destroy(gameObject);
-            //technically, flying is never set to 'false' again, but the script self-destructs when the crab gets there.
-            //So it's fine, right?
-        }
-
         if (flying)
         {
             Crab.GetComponent<Rigidbody>().useGravity = false;
@@ -60,6 +51,12 @@ public class HookController : MonoBehaviour
         else
         {
             transform.Translate(0.1f * direction);
+            if (Vector3.Distance(initialPosition, transform.position) > tapeRange)
+            {
+                //if the hook gets too far from the crab, it deletes itself.
+                Crab.GetComponent<CrabProperties>().currentHook = null;
+                Destroy(gameObject);
+            }
         }
     }
 

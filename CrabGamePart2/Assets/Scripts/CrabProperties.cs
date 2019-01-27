@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CrabProperties : MonoBehaviour
 {
 
-    int score;
+    public int score;
     //^how many tapes he got
     public Text scoreDisplay;
 
@@ -54,9 +54,11 @@ public class CrabProperties : MonoBehaviour
             // Check if the player is on the ground by looking for geometry below the player.
             int non_player_layer_mask = ~(1 << 9);
             SphereCollider c = GetComponent<SphereCollider>();
+            float tolerance = 0.2f;
+            float radius = c.bounds.center.y - c.bounds.min.y;
             bool on_ground = Physics.CheckSphere(
-                c.bounds.center + new Vector3(0, -c.radius/100, 0),
-                c.radius,
+                c.bounds.center + new Vector3(0, (-tolerance / 2.0f) * radius - 0.022f, 0),
+                (1.0f - tolerance) * radius,
                 non_player_layer_mask
             );
 
@@ -87,17 +89,5 @@ public class CrabProperties : MonoBehaviour
             //Debug.Log("Snip");
         }
 
-    }
-
-    // LateUpdate is called once after every frame
-    void LateUpdate()
-    {
-/*
-        if (ShellOn)
-        {
-            Shell.transform.position = this.transform.position + ShellOffset;
-            Shell.transform.rotation = this.transform.rotation;
-        }
-*/
     }
 }

@@ -260,6 +260,10 @@ Prefab:
       propertyPath: m_Name
       value: ScotchTape2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -268,6 +272,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
     type: 3}
   m_PrefabInternal: {fileID: 27452446}
+--- !u!1 &72623905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1557839466}
+--- !u!65 &72623906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72623905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &72623907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72623905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &112014562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 870610123}
+--- !u!65 &112014563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112014562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &112014564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112014562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1 &147947202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8b340d59d7eba44468a5e38661653157,
@@ -630,6 +694,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de309d733cee4048845aa25d3a32b9e, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &243077799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1539640489}
+--- !u!65 &243077800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243077799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &243077801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243077799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1001 &275348294
 Prefab:
   m_ObjectHideFlags: 0
@@ -839,6 +933,10 @@ Prefab:
     - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_Name
       value: ScotchTape2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -1185,6 +1283,186 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a42736f81c78421408d380f6be009abf, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &515076461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 2132925778}
+--- !u!65 &515076462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 515076461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &515076463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 515076461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &549586768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 307193848}
+--- !u!65 &549586769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549586768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &549586770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549586768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &570323468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1297191689}
+--- !u!65 &570323469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570323468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &570323470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570323468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &603157950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 926616912}
+--- !u!65 &603157951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603157950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &603157952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603157950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &639818544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1397190466}
+--- !u!65 &639818545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639818544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &639818546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639818544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &640952016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1609456010}
+--- !u!65 &640952017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 640952016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &640952018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 640952016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1001 &655357014
 Prefab:
   m_ObjectHideFlags: 0
@@ -1444,6 +1722,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -1927,6 +2209,10 @@ Prefab:
       propertyPath: m_Name
       value: ScotchTape2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -2092,6 +2378,10 @@ Prefab:
       propertyPath: m_Name
       value: ScotchTape2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -2166,6 +2456,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -2261,6 +2555,10 @@ Prefab:
     - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_Name
       value: ScotchTape1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -2661,6 +2959,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0dd2bc6b92e2444b7c1765d65cc342, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1116079593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 27452446}
+--- !u!65 &1116079594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116079593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1116079595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116079593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1001 &1130546957
 Prefab:
   m_ObjectHideFlags: 0
@@ -2731,6 +3059,66 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d33164583dab0147bbbe5c43f2dc6db, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1160601776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1255564009}
+--- !u!65 &1160601777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160601776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1160601778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1160601776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
+--- !u!1 &1168276954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 1637646684}
+--- !u!65 &1168276955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168276954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1168276956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168276954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1 &1182564355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 247e0579e88a16449a607a2bf1448952,
@@ -3128,6 +3516,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000004
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -3214,6 +3606,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -3414,6 +3810,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.001
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -3422,6 +3822,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
     type: 3}
   m_PrefabInternal: {fileID: 1397190466}
+--- !u!1 &1413293044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 712999374}
+--- !u!65 &1413293045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1413293044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1413293046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1413293044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1 &1449464560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,7 +4015,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499959795}
   m_LocalRotation: {x: 0.12895095, y: -0, z: -0, w: 0.991651}
-  m_LocalPosition: {x: 93.99, y: 12.31, z: 105.6}
+  m_LocalPosition: {x: 94, y: 11.3, z: 108.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1503332832}
@@ -3779,6 +4209,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000004
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -3841,6 +4275,10 @@ Prefab:
     - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_Name
       value: ScotchTape2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -3991,6 +4429,10 @@ Prefab:
       propertyPath: m_Name
       value: ScotchTape2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
   m_IsPrefabAsset: 0
@@ -4077,6 +4519,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
@@ -4260,7 +4706,7 @@ GameObject:
   - component: {fileID: 1728158188}
   - component: {fileID: 1728158189}
   - component: {fileID: 1728158195}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrabCube
   m_TagString: Crab
   m_Icon: {fileID: 0}
@@ -4292,7 +4738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d28846f393a96a4494f7c6c5a1ead8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreDisplay: {fileID: 1720965164}
   ShellPower: {fileID: 0}
+  Shell: {fileID: 0}
   currentHook: {fileID: 0}
 --- !u!23 &1728158191
 MeshRenderer:
@@ -4343,8 +4792,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728158187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.92, y: 10.38, z: 110.76}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 94, y: 10.38, z: 110.76}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 1878695381}
   m_Father: {fileID: 0}
@@ -4363,7 +4812,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &1728158195
 SphereCollider:
@@ -4377,6 +4826,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1783715880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 922191144}
+--- !u!65 &1783715881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783715880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1783715882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783715880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1001 &1801187922
 Prefab:
   m_ObjectHideFlags: 0
@@ -4435,6 +4914,36 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b340d59d7eba44468a5e38661653157, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1854308805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9,
+    type: 3}
+  m_PrefabInternal: {fileID: 941651743}
+--- !u!65 &1854308806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854308805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.5, z: 1}
+  m_Center: {x: 0.15, y: 0.25, z: 0.3}
+--- !u!114 &1854308807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854308805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7850f5d56b9b24e842c907bf396b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrapplingHook: {fileID: 1844202765068746, guid: 0f65d141c5a62804590f77e7fb822f7c,
+    type: 2}
 --- !u!1 &1878695380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,7 +4966,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1878695380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1728158193}
@@ -4602,6 +5111,10 @@ Prefab:
     - target: {fileID: 400000, guid: f25eefbd06afedd4f94983ccfe4b9c58, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f25eefbd06afedd4f94983ccfe4b9c58, type: 3}
+      propertyPath: m_TagString
+      value: Shell
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f25eefbd06afedd4f94983ccfe4b9c58, type: 3}
@@ -5179,6 +5692,10 @@ Prefab:
     - target: {fileID: 400006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
+      propertyPath: m_TagString
+      value: Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2218f9dee8dbd9f438c8471d46f6fdc9, type: 3}
