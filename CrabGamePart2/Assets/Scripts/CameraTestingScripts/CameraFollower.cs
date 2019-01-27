@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollower : MonoBehaviour {
     public GameObject target;
     public float rotateSpeed = 5;
-    Vector3 offset;
+    public Vector3 offset;
 
     public Vector3 cameraDirection;  // This gets updated every frame,
                                      // so please don't modify it in other scripts.

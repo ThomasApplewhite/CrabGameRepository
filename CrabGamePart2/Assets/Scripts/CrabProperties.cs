@@ -13,8 +13,10 @@ public class CrabProperties : MonoBehaviour
     public Component ShellPower;
     bool ShellOn;
     public GameObject Shell;
-    //^The shell
+    //^The shell equipped
     public HookController currentHook = null;
+    bool victory = false;
+    GameObject home_shell;  // The yellow "victory" shell.
 
     // Use this for initialization
     void Start()
@@ -44,11 +46,35 @@ public class CrabProperties : MonoBehaviour
                 Shell.transform.localEulerAngles = new Vector3(10f, 160f, 20f);
             }
         }
+
+        if(other.gameObject.CompareTag("Shell"))  // Won the game! Woo hoo!
+        {
+            victory = true;
+            home_shell = other.gameObject;
+
+            // Rotate crab so we can see it from side view.
+            CameraFollower cf = Camera.main.GetComponent<CameraFollower>();
+            cf.offset = Quaternion.EulerAngles(0f, 90f, 0f) * cf.offset;
+
+            if (Shell != null)
+            {
+                Destroy(Shell);
+                Shell = null;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (victory)
+        {
+            GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            transform.position = home_shell.transform.position + .42f * home_shell.transform.up;
+            return;
+        }
+
         // If the player falls out of the world ... we fix it ...
         if (transform.position.y < 0)
             transform.position = new Vector3(94, 12, 110);

@@ -3081,6 +3081,24 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77daf2404a941848b24e8f4f49ca9e3, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1074551638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: f25eefbd06afedd4f94983ccfe4b9c58,
+    type: 3}
+  m_PrefabInternal: {fileID: 1909821042}
+--- !u!136 &1074551639
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1074551638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0139734
+  m_Height: 2.7590244
+  m_Direction: 1
+  m_Center: {x: -0.061820507, y: -0.15071082, z: -0.013973242}
 --- !u!1001 &1097500819
 Prefab:
   m_ObjectHideFlags: 0
@@ -4235,6 +4253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1878695380}
   rotateSpeed: 10
+  offset: {x: 0, y: 0, z: 0}
   cameraDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &1503332831
 GameObject:
