@@ -49,6 +49,10 @@ public class CrabProperties : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the player falls out of the world ... we fix it ...
+        if (transform.position.y < 0)
+            transform.position = new Vector3(94, 12, 110);
+
         if (ShellOn)
         {
             // Check if the player is on the ground by looking for geometry below the player.
